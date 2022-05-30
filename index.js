@@ -5,25 +5,19 @@ const port = 3000;
 app.use(express.json())
 
 app.get("/", (req, res) => {
-    res.send("Hello world")
+    res.send("Meu home")
 })
 
-//get -- buscar informacoes // req.query
-//post -- criar informcoes //req.body
-//put - alterar informacoes //req.body
-//delete - deletar informacoes //req.params
-//options - informacoes que o servidor pode responder
-
 const listPessoas = [
-    {id: 1, nome: "joao"},
-    {id: 2, nome: "Maria"},
-    {id: 3, nome: "thiago"},
+    {id: 1, nome: "Thiago"},
+    {id: 2, nome: "Diego"},
+    {id: 3, nome: "João"},
 ];
 
 const listUsers = [
-    {id: 1, nome: "j"},
-    {id: 2, nome: "m"},
-    {id: 3, nome: "t"},
+    {id: 1, nome: "thigas"},
+    {id: 2, nome: "dieguito"},
+    {id: 3, nome: "jon"},
 ];
 
 app.post("/api/pessoas", (req, res) => {
@@ -59,9 +53,6 @@ app.get("/api/pessoas", (req, res) => {
     console.log(req)
     res.json(listPessoas)
 })
-
-
-//------------------------------------------------------------------------------
 
 app.post("/api/users", (req, res) => {
     const user = req.body;
